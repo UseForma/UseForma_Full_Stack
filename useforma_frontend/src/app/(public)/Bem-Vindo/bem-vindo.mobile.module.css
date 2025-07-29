@@ -1,0 +1,432 @@
+/* Bem-Vindo Mobile Styles */
+
+.mobileContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.mobileContent {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  padding: 1rem;
+}
+
+.mobileHeader {
+  margin-bottom: 2rem;
+}
+
+.mobileTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.mobileTitleAccent {
+  color: #3b82f6;
+}
+
+.mobileSubtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+.mobileFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.mobileFeatureCard {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.mobileFeatureCard:active {
+  transform: scale(0.98);
+}
+
+.mobileFeatureIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.mobileFeatureIconIndigo {
+  background-color: #eef2ff;
+}
+
+.mobileFeatureIconGreen {
+  background-color: #ecfdf5;
+}
+
+.mobileFeatureIconPurple {
+  background-color: #faf5ff;
+}
+
+.mobileFeatureIconSvg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.mobileFeatureIconSvgIndigo {
+  color: #3b82f6;
+}
+
+.mobileFeatureIconSvgGreen {
+  color: #10b981;
+}
+
+.mobileFeatureIconSvgPurple {
+  color: #8b5cf6;
+}
+
+.mobileFeatureTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.mobileFeatureDescription {
+  color: #6b7280;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+.mobileCtaSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.mobileCtaButton {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.mobileCtaButton:hover {
+  background-color: #2563eb;
+}
+
+.mobileCtaButton:active {
+  transform: scale(0.98);
+  background-color: #1d4ed8;
+}
+
+.mobileCtaButtonSecondary {
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+  background: transparent;
+}
+
+.mobileCtaButtonSecondary:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.mobileCtaButtonSecondary:active {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.mobileCtaIcon {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.mobileCtaButton:hover .mobileCtaIcon {
+  transform: translateX(2px);
+}
+
+.mobileFooter {
+  color: #9ca3af;
+  font-size: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* Mobile-specific animations */
+.mobileFadeIn {
+  animation: mobileFadeIn 0.6s ease-out;
+}
+
+.mobileSlideUp {
+  animation: mobileSlideUp 0.6s ease-out;
+}
+
+.mobileStagger {
+  animation: mobileStagger 0.5s ease-out;
+}
+
+@keyframes mobileFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mobileSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mobileStagger {
+  0% {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile background decoration */
+.mobileBackgroundDecoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mobileDecorationCircle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%);
+}
+
+.mobileDecorationCircle1 {
+  width: 200px;
+  height: 200px;
+  top: -100px;
+  right: -100px;
+  animation: mobileFloat 8s ease-in-out infinite;
+}
+
+.mobileDecorationCircle2 {
+  width: 150px;
+  height: 150px;
+  bottom: -75px;
+  left: -75px;
+  animation: mobileFloat 10s ease-in-out infinite reverse;
+}
+
+@keyframes mobileFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Touch-friendly improvements */
+.mobileFeatureCard {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobileCtaButton {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 48px; /* Minimum touch target size */
+}
+
+/* Small screen optimizations */
+@media (max-width: 375px) {
+  .mobileContainer {
+    padding: 0.75rem;
+  }
+  
+  .mobileContent {
+    padding: 0.75rem;
+  }
+  
+  .mobileTitle {
+    font-size: 2rem;
+  }
+  
+  .mobileSubtitle {
+    font-size: 0.875rem;
+  }
+  
+  .mobileFeatureCard {
+    padding: 1rem;
+  }
+  
+  .mobileFeatureIcon {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .mobileFeatureIconSvg {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .mobileCtaButton {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .mobileContainer {
+    padding: 0.5rem;
+  }
+  
+  .mobileHeader {
+    margin-bottom: 1rem;
+  }
+  
+  .mobileTitle {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .mobileSubtitle {
+    font-size: 0.875rem;
+  }
+  
+  .mobileFeatures {
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .mobileFeatureCard {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  .mobileCtaSection {
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .mobileCtaButton {
+    flex: 1;
+    max-width: none;
+  }
+}
+
+/* Dark mode support for mobile */
+@media (prefers-color-scheme: dark) {
+  .mobileContainer {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  }
+  
+  .mobileTitle {
+    color: #f9fafb;
+  }
+  
+  .mobileSubtitle {
+    color: #d1d5db;
+  }
+  
+  .mobileFeatureCard {
+    background: #1f2937;
+    border-color: rgba(59, 130, 246, 0.2);
+  }
+  
+  .mobileFeatureTitle {
+    color: #f9fafb;
+  }
+  
+  .mobileFeatureDescription {
+    color: #9ca3af;
+  }
+  
+  .mobileFooter {
+    color: #6b7280;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .mobileFeatureCard {
+    border: 2px solid #3b82f6;
+  }
+  
+  .mobileCtaButton {
+    border: 2px solid #3b82f6;
+  }
+  
+  .mobileCtaButtonSecondary {
+    border: 3px solid #3b82f6;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .mobileFeatureCard,
+  .mobileCtaButton,
+  .mobileFeatureIcon,
+  .mobileCtaIcon {
+    transition: none;
+  }
+  
+  .mobileDecorationCircle1,
+  .mobileDecorationCircle2 {
+    animation: none;
+  }
+  
+  .mobileFadeIn,
+  .mobileSlideUp,
+  .mobileStagger {
+    animation: none;
+  }
+}

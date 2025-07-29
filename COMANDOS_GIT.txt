@@ -1,0 +1,39 @@
+# COMANDOS ÚTEIS - UseForma
+
+## GIT
+git status                    # Ver status das mudanças
+git add .                     # Adicionar todas as mudanças
+git commit -m "mensagem"      # Fazer commit
+git push                      # Enviar para repositório
+git pull                      # Baixar mudanças do repositório
+git branch                    # Ver branches locais
+git branch -a                 # Ver todas as branches
+git checkout nome-branch      # Mudar para branch
+git checkout -b nova-branch   # Criar e mudar para nova branch
+git branch -d nome-branch     # Deletar branch local
+git branch -D nome-branch     # Forçar deletar branch
+git push origin --delete nome-branch  # Deletar branch remota
+
+## DESENVOLVIMENTO
+cd useforma_backend           # Entrar no backend
+cd useforma_frontend          # Entrar no frontend
+npm install                   # Instalar dependências
+npm run dev                   # Rodar em desenvolvimento
+npm run build                 # Buildar projeto
+npm run start                 # Rodar em produção
+
+## BACKEND (NestJS)
+npm run start:dev            # Desenvolvimento
+npm run start:debug          # Debug
+npm run test                 # Testes
+npm run lint                 # Linter
+
+## FRONTEND (Next.js)
+npm run dev                  # Desenvolvimento (porta 3001)
+npm run build                # Build
+npm run start                # Produção
+npm run lint                 # Linter
+
+## PERMISSÕES (macOS)
+sudo chown -R $(whoami) .    # Corrigir permissões
+chmod -R 755 .               # Definir permissões 
