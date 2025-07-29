@@ -17,6 +17,8 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
+import styles from './public-menu.module.css'
+import mobileStyles from './public-menu.mobile.module.css'
 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
@@ -68,15 +70,15 @@ const navigationLinks = [
 
 export default function PublicMenu() {
   return (
-    <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 px-4 md:px-6 sticky top-0 z-50">
-      <div className="flex h-16 items-center justify-between gap-4">
+    <header className={cn(styles.header, mobileStyles.mobileHeader)}>
+      <div className={cn(styles.container, mobileStyles.mobileContainer)}>
         {/* Left side */}
-        <div className="flex items-center gap-2">
+        <div className={cn(styles.leftSection, mobileStyles.mobileLeftSection)}>
           {/* Mobile menu trigger */}
           <Popover>
             <PopoverTrigger asChild>
               <Button
-                className="group size-8 md:hidden"
+                className={cn(styles.mobileMenuButton, "group size-8 md:hidden")}
                 variant="ghost"
                 size="icon"
               >
@@ -107,34 +109,34 @@ export default function PublicMenu() {
                 </svg>
               </Button>
             </PopoverTrigger>
-            <PopoverContent align="start" className="w-64 p-1 md:hidden">
+            <PopoverContent align="start" className={cn(mobileStyles.mobileMenuContent, "w-64 p-1 md:hidden")}>
               <NavigationMenu className="max-w-none *:w-full">
-                <NavigationMenuList className="flex-col items-start gap-0 md:gap-2">
-                  {navigationLinks.map((link, index) => (
-                    <NavigationMenuItem key={index} className="w-full">
-                      {link.submenu ? (
-                        <>
-                          <div className="text-muted-foreground px-2 py-1.5 text-xs font-medium">
-                            {link.label}
-                          </div>
-                          <ul>
-                            {link.items.map((item, itemIndex) => (
-                              <li key={itemIndex}>
-                                <NavigationMenuLink
-                                  href={item.href}
-                                  className="py-1.5"
-                                >
-                                  {item.label}
-                                </NavigationMenuLink>
-                              </li>
-                            ))}
-                          </ul>
+                <NavigationMenuList className={cn(mobileStyles.mobileNavigationList, "flex-col items-start gap-0 md:gap-2")}>
+                                      {navigationLinks.map((link, index) => (
+                      <NavigationMenuItem key={index} className={mobileStyles.mobileNavigationItem}>
+                        {link.submenu ? (
+                          <>
+                            <div className={mobileStyles.mobileSubmenuLabel}>
+                              {link.label}
+                            </div>
+                                                      <ul className={mobileStyles.mobileSubmenuList}>
+                              {link.items.map((item, itemIndex) => (
+                                <li key={itemIndex} className={mobileStyles.mobileSubmenuItem}>
+                                  <NavigationMenuLink
+                                    href={item.href}
+                                    className={mobileStyles.mobileSubmenuLink}
+                                  >
+                                    {item.label}
+                                  </NavigationMenuLink>
+                                </li>
+                              ))}
+                            </ul>
                         </>
-                      ) : (
-                        <NavigationMenuLink href={link.href} className="py-1.5">
-                          {link.label}
-                        </NavigationMenuLink>
-                      )}
+                                              ) : (
+                          <NavigationMenuLink href={link.href} className={mobileStyles.mobileNavigationLink}>
+                            {link.label}
+                          </NavigationMenuLink>
+                        )}
                       {/* Add separator between different types of items */}
                       {index < navigationLinks.length - 1 &&
                         // Show separator if:
@@ -150,7 +152,7 @@ export default function PublicMenu() {
                           <div
                             role="separator"
                             aria-orientation="horizontal"
-                            className="bg-border -mx-1 my-1 h-px w-full"
+                            className={mobileStyles.mobileSeparator}
                           />
                         )}
                     </NavigationMenuItem>
@@ -160,33 +162,37 @@ export default function PublicMenu() {
             </PopoverContent>
           </Popover>
           {/* Main nav */}
-          <div className="flex items-center gap-6">
-            <Link href="/Bem-Vindo" className="text-primary hover:text-primary/90">
+          <div className={styles.mainNav}>
+            <Link href="/Bem-Vindo" className={styles.logo}>
               <Logo />
             </Link>
             {/* Navigation menu */}
-            <NavigationMenu viewport={false} className="max-md:hidden">
-              <NavigationMenuList className="gap-2">
+            <NavigationMenu viewport={false} className={styles.navigationMenu}>
+              <NavigationMenuList className={styles.navigationList}>
                 {navigationLinks.map((link, index) => (
-                  <NavigationMenuItem key={index}>
+                  <NavigationMenuItem key={index} className={styles.navigationItem}>
                     {link.submenu ? (
                       <>
-                        <NavigationMenuTrigger className="text-muted-foreground hover:text-primary bg-transparent px-2 py-1.5 font-medium *:[svg]:-me-0.5 *:[svg]:size-3.5">
+                        <NavigationMenuTrigger className={styles.navigationTrigger}>
                           {link.label}
                         </NavigationMenuTrigger>
-                        <NavigationMenuContent className="data-[motion=from-end]:slide-in-from-right-16! data-[motion=from-start]:slide-in-from-left-16! data-[motion=to-end]:slide-out-to-right-16! data-[motion=to-start]:slide-out-to-left-16! z-50 p-1">
+                        <NavigationMenuContent className={styles.navigationContent}>
                           <ul
                             className={cn(
                               link.type === "description"
-                                ? "min-w-64"
-                                : "min-w-48"
+                                ? styles.menuListDescription
+                                : styles.menuList
                             )}
                           >
                             {link.items.map((item, itemIndex) => (
-                              <li key={itemIndex}>
+                              <li key={itemIndex} className={styles.menuItem}>
                                 <NavigationMenuLink
                                   href={item.href}
-                                  className="py-1.5"
+                                  className={cn(
+                                    link.type === "icon" ? styles.menuItemWithIcon : 
+                                    link.type === "description" ? styles.menuItemWithDescription : 
+                                    styles.menuItem
+                                  )}
                                 >
                                   {/* Display icon if present */}
                                   {link.type === "icon" && "icon" in item && (
@@ -194,21 +200,21 @@ export default function PublicMenu() {
                                       {item.icon === "BookOpenIcon" && (
                                         <BookOpenIcon
                                           size={16}
-                                          className="text-foreground opacity-60"
+                                          className={styles.mobileSubmenuIcon}
                                           aria-hidden="true"
                                         />
                                       )}
                                       {item.icon === "LifeBuoyIcon" && (
                                         <LifeBuoyIcon
                                           size={16}
-                                          className="text-foreground opacity-60"
+                                          className={styles.mobileSubmenuIcon}
                                           aria-hidden="true"
                                         />
                                       )}
                                       {item.icon === "InfoIcon" && (
                                         <InfoIcon
                                           size={16}
-                                          className="text-foreground opacity-60"
+                                          className={styles.mobileSubmenuIcon}
                                           aria-hidden="true"
                                         />
                                       )}
@@ -219,11 +225,11 @@ export default function PublicMenu() {
                                   {/* Display label with description if present */}
                                   {link.type === "description" &&
                                   "description" in item ? (
-                                    <div className="space-y-1">
-                                      <div className="font-medium">
+                                    <div className={styles.menuItemWithDescription}>
+                                      <div className={styles.menuItemTitle}>
                                         {item.label}
                                       </div>
-                                      <p className="text-muted-foreground line-clamp-2 text-xs">
+                                      <p className={styles.menuItemDescription}>
                                         {item.description}
                                       </p>
                                     </div>
@@ -244,7 +250,7 @@ export default function PublicMenu() {
                     ) : (
                       <NavigationMenuLink
                         href={link.href}
-                        className="text-muted-foreground hover:text-primary py-1.5 font-medium"
+                        className={styles.navigationLink}
                       >
                         {link.label}
                       </NavigationMenuLink>
@@ -256,11 +262,11 @@ export default function PublicMenu() {
           </div>
         </div>
         {/* Right side */}
-        <div className="flex items-center gap-2">
-          <Button asChild variant="ghost" size="sm" className="text-sm">
+        <div className={styles.rightSection}>
+          <Button asChild variant="ghost" size="sm" className={cn(styles.button, styles.buttonGhost, styles.buttonSmall)}>
             <Link href="/Login-Signup">Entrar</Link>
           </Button>
-          <Button asChild size="sm" className="text-sm">
+          <Button asChild size="sm" className={cn(styles.button, styles.buttonPrimary, styles.buttonSmall)}>
             <Link href="/Login-Signup">Começar</Link>
           </Button>
         </div>

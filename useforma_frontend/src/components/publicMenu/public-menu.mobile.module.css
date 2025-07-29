@@ -1,13 +1,14 @@
 /* PublicMenu Mobile Styles */
 
 .mobileHeader {
-  border-bottom: 1px solid #e5e7eb;
-  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
   backdrop-filter: blur(12px);
   padding: 0 1rem;
   position: sticky;
   top: 0;
   z-index: 50;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .mobileContainer {
@@ -28,7 +29,7 @@
 .mobileLogo {
   font-size: 1.125rem;
   font-weight: 700;
-  color: #1f2937;
+  color: #ffffff;
 }
 
 .mobileLogoAccent {
@@ -49,31 +50,31 @@
 }
 
 .mobileMenuButton:hover {
-  background-color: #f3f4f6;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .mobileMenuButton:active {
-  background-color: #e5e7eb;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .mobileMenuIcon {
   width: 1.25rem;
   height: 1.25rem;
-  color: #6b7280;
+  color: #ffffff;
   transition: color 0.2s ease;
 }
 
 .mobileMenuButton:hover .mobileMenuIcon {
-  color: #374151;
+  color: #3b82f6;
 }
 
 .mobileMenuContent {
   width: 100%;
   max-width: 20rem;
-  background: white;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
   border-radius: 0.75rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  border: 1px solid #e5e7eb;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0.5rem;
   margin-top: 0.5rem;
 }
@@ -92,7 +93,7 @@
   display: block;
   width: 100%;
   padding: 0.75rem 1rem;
-  color: #374151;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   border-radius: 0.5rem;
   transition: all 0.2s ease;
@@ -100,12 +101,12 @@
 }
 
 .mobileNavigationLink:hover {
-  background-color: #f3f4f6;
-  color: #1f2937;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
 .mobileNavigationLink:active {
-  background-color: #e5e7eb;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .mobileSubmenuSection {
@@ -113,7 +114,7 @@
 }
 
 .mobileSubmenuLabel {
-  color: #6b7280;
+  color: rgba(255, 255, 255, 0.6);
   padding: 0.5rem 1rem;
   font-size: 0.75rem;
   font-weight: 600;
@@ -134,7 +135,7 @@
 .mobileSubmenuLink {
   display: block;
   padding: 0.5rem 1rem;
-  color: #6b7280;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   border-radius: 0.375rem;
   transition: all 0.2s ease;
@@ -142,8 +143,8 @@
 }
 
 .mobileSubmenuLink:hover {
-  background-color: #f9fafb;
-  color: #374151;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
 .mobileSubmenuLinkWithIcon {
@@ -155,7 +156,7 @@
 .mobileSubmenuIcon {
   width: 1rem;
   height: 1rem;
-  color: #9ca3af;
+  color: rgba(255, 255, 255, 0.6);
   flex-shrink: 0;
 }
 
@@ -167,18 +168,18 @@
 
 .mobileSubmenuTitle {
   font-weight: 500;
-  color: #374151;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .mobileSubmenuDescription {
   font-size: 0.75rem;
-  color: #6b7280;
+  color: rgba(255, 255, 255, 0.6);
   line-height: 1.25;
 }
 
 .mobileSeparator {
   height: 1px;
-  background-color: #e5e7eb;
+  background-color: rgba(255, 255, 255, 0.1);
   margin: 0.5rem 0;
 }
 
@@ -204,25 +205,27 @@
 
 .mobileButtonGhost {
   background: transparent;
-  color: #6b7280;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .mobileButtonGhost:hover {
-  background-color: #f3f4f6;
-  color: #374151;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
 .mobileButtonPrimary {
-  background-color: #3b82f6;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
   color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
 .mobileButtonPrimary:hover {
-  background-color: #2563eb;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
 }
 
 .mobileButtonPrimary:active {
-  background-color: #1d4ed8;
+  background: linear-gradient(135deg, #1d4ed8, #6d28d9);
 }
 
 /* Mobile menu animations */

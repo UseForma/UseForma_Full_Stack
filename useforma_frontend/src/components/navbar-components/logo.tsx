@@ -5,14 +5,57 @@ export default function Logo() {
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
-        fill="currentColor"
-        className="text-indigo-600"
+        viewBox="0 0 24 24"
+        fill="none"
+        className="text-blue-500"
       >
-        <path d="M20.46 1.766 17.303.923l-2.66 9.896-2.403-8.934-3.157.843 2.595 9.652-6.464-6.442-2.311 2.304 7.09 7.066-8.83-2.358-.846 3.146 9.648 2.577a6.516 6.516 0 0 1-.169-1.478c0-3.598 2.927-6.515 6.537-6.515s6.537 2.917 6.537 6.515c0 .505-.057.997-.167 1.468l8.768 2.342.846-3.147-9.686-2.586 8.83-2.358-.845-3.147-9.686 2.587 6.464-6.442-2.311-2.304-6.992 6.969 2.369-8.81Z" />
-        <path d="M22.695 18.7a6.495 6.495 0 0 1-1.626 2.986l6.352 6.33 2.31-2.303-7.036-7.013ZM21.005 21.752a6.538 6.538 0 0 1-2.922 1.722l2.312 8.596 3.157-.843-2.547-9.475ZM17.965 23.505a6.569 6.569 0 0 1-1.632.205 6.566 6.566 0 0 1-1.743-.235l-2.314 8.605 3.157.843 2.532-9.418ZM14.478 23.444a6.54 6.54 0 0 1-2.87-1.747l-6.367 6.346 2.31 2.303 6.927-6.902ZM11.555 21.64a6.492 6.492 0 0 1-1.585-2.948L1.173 21.04l.846 3.146 9.536-2.546Z" />
+        {/* Central circle (dark background) */}
+        <circle cx="12" cy="12" r="3" fill="currentColor" className="text-slate-800" />
+        
+        {/* Radiating rays/petals */}
+        <path
+          d="M12 2C12 2 13.5 4 15 4C16.5 4 18 2 18 2L17 5C17 5 15.5 7 14 7C12.5 7 11 5 11 5L12 2Z"
+          fill="currentColor"
+          className="text-blue-500"
+        />
+        <path
+          d="M12 2C12 2 10.5 4 9 4C7.5 4 6 2 6 2L7 5C7 5 8.5 7 10 7C11.5 7 13 5 13 5L12 2Z"
+          fill="currentColor"
+          className="text-blue-500"
+        />
+        <path
+          d="M22 12C22 12 20 13.5 20 15C20 16.5 22 18 22 18L19 17C19 17 17 15.5 17 14C17 12.5 19 11 19 11L22 12Z"
+          fill="currentColor"
+          className="text-blue-500"
+        />
+        <path
+          d="M22 12C22 12 20 10.5 20 9C20 7.5 22 6 22 6L19 7C19 7 17 8.5 17 10C17 11.5 19 13 19 13L22 12Z"
+          fill="currentColor"
+          className="text-blue-500"
+        />
+        <path
+          d="M12 22C12 22 13.5 20 15 20C16.5 20 18 22 18 22L17 19C17 19 15.5 17 14 17C12.5 17 11 19 11 19L12 22Z"
+          fill="currentColor"
+          className="text-blue-500"
+        />
+        <path
+          d="M12 22C12 22 10.5 20 9 20C7.5 20 6 22 6 22L7 19C7 19 8.5 17 10 17C11.5 17 13 19 13 19L12 22Z"
+          fill="currentColor"
+          className="text-blue-500"
+        />
+        <path
+          d="M2 12C2 12 4 13.5 4 15C4 16.5 2 18 2 18L5 17C5 17 7 15.5 7 14C7 12.5 5 11 5 11L2 12Z"
+          fill="currentColor"
+          className="text-blue-500"
+        />
+        <path
+          d="M2 12C2 12 4 10.5 4 9C4 7.5 2 6 2 6L5 7C5 7 7 8.5 7 10C7 11.5 5 13 5 13L2 12Z"
+          fill="currentColor"
+          className="text-blue-500"
+        />
       </svg>
       <span className="font-bold text-xl">
-        Use<span className="text-indigo-600">Forma</span>
+        Use<span className="text-blue-500">Forma</span>
       </span>
     </div>
   )
