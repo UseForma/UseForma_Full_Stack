@@ -34,18 +34,12 @@
 
 .titleUse {
   position: absolute;
-  top: -2rem;
-  left: 48%;
+  top: -1.5rem;
+  left: 47.5%;
   transform: translateX(-50%);
   font-size: 1rem;
   font-weight: 800;
   color: #ffffff;
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-  padding: 0.5rem 1rem;
-  border-radius: 16px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   z-index: 2;
 }
@@ -99,8 +93,8 @@
   
   .titleUse {
     font-size: 1.2rem;
-    top: -2.5rem;
-    left: 48%;
+    top: -1.5rem;
+    left: 47.5%;
   }
   
   .titleForma {
@@ -119,8 +113,8 @@
 @media (min-width: 768px) {
   .titleUse {
     font-size: 1.4rem;
-    top: -2.8rem;
-    left: 48%;
+    top: -1.5rem;
+    left: 47.5%;
   }
   
   .titleForma {
@@ -147,8 +141,8 @@
   
   .titleUse {
     font-size: 1.8rem;
-    top: -3.0rem;
-    left: 48%;
+    top: -1.5rem;
+    left: 47.5%;
   }
   
   .titleForma {
@@ -168,9 +162,8 @@
   
   .titleUse {
     font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
     top: -1.5rem;
-    left: 48%;
+    left: 47.5%;
   }
   
   .titleForma {
@@ -203,7 +196,7 @@
   .titleUse {
     font-size: 0.9rem;
     top: -1.5rem;
-    left: 48%;
+    left: 47.5%;
   }
   
   .titleForma {
@@ -294,10 +287,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-  }
-  
-  .titleUse {
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
   }
   
   .subtitle {
