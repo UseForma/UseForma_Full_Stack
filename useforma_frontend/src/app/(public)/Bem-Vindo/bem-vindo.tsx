@@ -17,11 +17,12 @@ export default function BemVindo() {
           {/* Header */}
           <div className={styles.header}>
             <div className={styles.titleContainer}>
-              <div className={styles.titleUse}>{BEM_VINDO_CONST.TITULO_SISTEMA_01}</div>
-              <h1 className={styles.titleForma}>{BEM_VINDO_CONST.TITULO_SISTEMA_02}</h1>
+              <div className={styles.titleUse}>USE</div>
+              <h1 className={styles.titleForma}>FORMA</h1>
             </div>
-            <p className={styles.subtitle}>{BEM_VINDO_CONST.SUBTITULO_SISTEMA}</p>
-            <p className={styles.description}>{BEM_VINDO_CONST.DESCRICAO_SISTEMA}</p>
+            <p className={styles.subtitle}>
+              Sistema completo de gestão para academias. Gerencie alunos, treinos e resultados com eficiência total.
+            </p>
           </div>
         </div>
       </div>
