@@ -15,10 +15,10 @@ export default function BemVindo() {
         <div className={styles.content}>
           {/* Header */}
           <div className={styles.header}>
-            <h1 className={styles.title}>
-              <span className={styles.titleUse}>USE</span>
-              <span className={styles.titleForma}>FORMA</span>
-            </h1>
+            <div className={styles.titleContainer}>
+              <div className={styles.titleUse}>USE</div>
+              <h1 className={styles.titleForma}>FORMA</h1>
+            </div>
             <p className={styles.subtitle}>
               Seu sistema completo de gestão e formação. Transforme sua experiência de aprendizado.
             </p>
